@@ -5,6 +5,7 @@ import "./App.css";
 
 import { Login } from "./components/login";
 import { FriendList } from "./components/friendlist";
+import { AddFriend } from "./components/AddFriend";
 
 function App() {
   return (
@@ -18,9 +19,13 @@ function App() {
             <li>
               <Link to="/friendslist">Friends List</Link>
             </li>
+            <li>
+              <Link to="/addfriend">Add Friend</Link>
+            </li>
           </ul>
           <Switch>
             <PrivateRoute exact path="/friendslist" component={FriendList} />
+            <PrivateRoute exact path="/addfriend" component={AddFriend} />
             <Route path="/login" component={Login} />
             <Route component={Login} />
           </Switch>
