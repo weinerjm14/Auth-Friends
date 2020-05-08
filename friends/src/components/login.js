@@ -2,27 +2,25 @@ import React, { useState } from "react";
 
 import { axiosWithAuth } from "../util/axiosWithAuth";
 
-export function Login() {
+export function Login(props) {
   const [creds, setCreds] = useState({
     username: "",
     password: "",
   });
   const handleChange = e => {
     setCreds({
-      creds: {
-        ...creds,
-        [e.target.name]: e.target.value,
-      },
+      ...creds,
+      [e.target.name]: e.target.value,
     });
   };
   const login = e => {
     e.preventDefault();
     console.log(creds);
     axiosWithAuth()
-      .post("/login", { creds })
+      .post("/login", creds)
       .then(res => {
         localStorage.setItem("token", res.data.payload);
-        // history.push("/friendslist");
+        props.history.push("/friendslist");
       })
       .catch(err => {
         console.log("Err is: ", err);
