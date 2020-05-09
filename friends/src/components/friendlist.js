@@ -9,6 +9,14 @@ export function FriendList() {
       .then(res => setFriends(res.data))
       .catch(err => console.log("error getting data:", err));
   }, []);
+  const removeFriend = (e, id) => {
+    e.preventDefault();
+    axiosWithAuth()
+      .delete(`/friends/${id}`, localStorage.getItem("token"))
+      .then(res => setFriends(res.data))
+      .catch(err => console.log("Error removing friend:", err));
+  };
+
   return (
     <div>
       <h2>Your Friends</h2>
@@ -20,6 +28,9 @@ export function FriendList() {
                 <h3>{friend.name}</h3>
                 <p>Age: {friend.age}</p>
                 <p>Email: {friend.email}</p>
+                <button onClick={e => removeFriend(e, friend.id)}>
+                  Remove
+                </button>
               </section>
             );
           })
