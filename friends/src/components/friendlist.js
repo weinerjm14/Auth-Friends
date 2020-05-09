@@ -10,21 +10,23 @@ export function FriendList() {
       .catch(err => console.log("error getting data:", err));
   }, []);
   return (
-    <section className="flcontainer">
+    <div>
       <h2>Your Friends</h2>
-      {friends ? (
-        friends.map(friend => {
-          return (
-            <section className="friend" key={friend.id}>
-              <h3>{friend.name}</h3>
-              <p>Age: {friend.age}</p>
-              <p>Email: {friend.email}</p>
-            </section>
-          );
-        })
-      ) : (
-        <h2>Finding Friends</h2>
-      )}
-    </section>
+      <section className="flcontainer">
+        {friends ? (
+          friends.map(friend => {
+            return (
+              <section className="friend" key={friend.id}>
+                <h3>{friend.name}</h3>
+                <p>Age: {friend.age}</p>
+                <p>Email: {friend.email}</p>
+              </section>
+            );
+          })
+        ) : (
+          <h2>Finding Friends</h2>
+        )}
+      </section>
+    </div>
   );
 }

@@ -36,13 +36,15 @@ export function Login(props) {
           value={creds.username}
           onChange={handleChange}
         />
-        <label>Password:</label>
+        <br />
+        <label>Password: </label>
         <input
           type="password"
           name="password"
           value={creds.password}
           onChange={handleChange}
         />
+        <br />
         <button type="submit">Log In</button>
       </form>
     </section>

@@ -31,27 +31,30 @@ export function AddFriend(props) {
   return (
     <section className="newFriendForm">
       <form onSubmit={addNewFriend}>
-        <label>Name</label>
+        <label>Name:</label>
         <input
           type="text"
           name="name"
           value={newFriend.name}
           onChange={handleChange}
         />
-        <label>age</label>
+        <br />
+        <label> Age: </label>
         <input
           type="text"
           name="age"
           value={newFriend.age}
           onChange={handleChange}
         />
-        <label>Email</label>
+        <br />
+        <label>Email:</label>
         <input
           type="email"
           name="email"
           value={newFriend.email}
           onChange={handleChange}
         />
+        <br />
         <button>Add New Friend</button>
       </form>
     </section>
