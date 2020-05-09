@@ -1,8 +1,12 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: honeydew;
+}
 .nav {
   background-color: rebeccapurple;
+  padding-top: 2%;
 }
 a {
   text-decoration: none;
@@ -29,16 +33,17 @@ input {
 .friend {
   width: 30%;
   border: 4px inset rebeccapurple;
-  background-color: turquoise;
+  background-color: gainsboro;
   margin: 1%;
 }
 button {
   background-color: rebeccapurple;
-  border: 3px inset turquoise;
+  border: 3px inset gold;
   color: white;
+  margin-bottom: 2%;
 }
 button:hover {
   background-color: turquoise;
-  border: 3px inset rebeccapurple;
+  border: 3px inset gold;
   color: white;
 }

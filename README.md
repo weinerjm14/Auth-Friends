@@ -32,7 +32,7 @@ Topics:
 * If you experience issues with `npx`, you may create your starter application by running `create-react-app friends --use-npm`.
 * `cd` into the _friends_ folder and type `npm install axios react-router-dom` which will install the needed dependencies. -->
 
-## Build the App!
+<!-- ## Build the App!
 
 - Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
 - The login function should save the returned token to localStorage. You can setup `isLoading` state in your Login component, and show a spinner on your form or in your button while the login request is happening.
@@ -54,7 +54,7 @@ Topics:
   age: 24,
   email: 'joe@lambdaschool.com',
 }
-```
+``` -->
 
 - If you'd like, you can create multiple "view" components for your routes. You could have a component who's sole purpose is to render the login form; one for a form for updating a user; another component who's sole purpose is for creating users; and then another component who's sole purpose is to delete a user.
 - It really is up to you how you build this project. I suggest writing down the flow you want to follow, and then writing down each individual piece you need for each step in the flow so that this process doesn't feel as overwhelming.
@@ -62,5 +62,5 @@ Topics:
 ## Stretch Problem
 
 - In the requirements for this project, we implemented a login POST operation, a GET operation, and a "add friend" POST operation. Add two more functions, one for making a PUT request, and the other for making a DELETE request.
-- Style the friends list and the input field and make everything look nice.
+<!-- - Style the friends list and the input field and make everything look nice. -->
 - Expand the number of properties that you put on each friend object. Feel free to remove the dummy data on the server or modify it in any way.

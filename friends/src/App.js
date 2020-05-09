@@ -7,7 +7,12 @@ import { Login } from "./components/login";
 import { FriendList } from "./components/friendlist";
 import { AddFriend } from "./components/AddFriend";
 
-function App() {
+function App(props) {
+  const logout = e => {
+    e.preventDefault();
+    localStorage.removeItem("token");
+    window.location.reload(false);
+  };
   return (
     <section className="App">
       <Router>
@@ -17,6 +22,7 @@ function App() {
           <Link to="/friendslist">Friends List</Link>
 
           <Link to="/addfriend">Add Friend</Link>
+          <button onClick={logout}>Log Out</button>
         </div>
         <div className="routes">
           <Switch>
