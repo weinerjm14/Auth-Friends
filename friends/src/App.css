@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: honeydew;
+}
+.nav {
+  background-color: rebeccapurple;
+  padding-top: 2%;
+}
+a {
+  text-decoration: none;
+  width: 15vw;
+  height: 20vh;
+  margin: 5%;
+  color: white;
+}
+ul {
+  list-style-type: none;
+}
+.loginForm,
+.newFriendForm {
+  margin: 15%;
+}
+input {
+  margin: 2%;
+}
+.flcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.friend {
+  width: 30%;
+  border: 4px inset rebeccapurple;
+  background-color: gainsboro;
+  margin: 1%;
+}
+button {
+  background-color: rebeccapurple;
+  border: 3px inset gold;
+  color: white;
+  margin-bottom: 2%;
+}
+button:hover {
+  background-color: turquoise;
+  border: 3px inset gold;
+  color: white;
+}
